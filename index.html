@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      #header {
+        border: 5px solid black;
+        width: 400px;
+        height: 500px;
+        margin-left: 600px;
+      }
+      #head {
+        background-color: yellow;
+
+        height: 50px;
+        width: 300px;
+        margin-left: 50px;
+      }
+      #main {
+        margin: 70px;
+      }
+      #timer {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+    <div id="header">
+      <div id="head">
+        <h3>Project : Quotes application</h3>
+      </div>
+      <div id="timer">
+        <p id="demo"></p>
+      </div>
+      <div id="main">
+        <p>NAME : harsh sharma</p>
+        <p>Company Name : SP Softcorn</p>
+        <h3>
+          Quotes PRICE :-
+          <p id="message">80000</p>
+        </h3>
+      </div>
+    </div>
+    <!-- <button onclick="myfun()">SUBMIT</button> -->
+    <script>
+      setInterval(myfun, 1000);
+      function myfun() {
+        document.getElementById("demo").innerHTML =
+          new Date().toLocaleTimeString();
+        let quotes = "";
+        let hours = new Date().getHours();
+        if (hours == 12) {
+          quotes = 100000;
+        } else if (hours == 6) {
+          quotes = 120000;
+        } else if (hours == 9) {
+          quotes = 140000;
+        } else {
+        }
+        document.getElementById("message").innerHTML = quotes;
+      }
+    </script>
+  </body>
+</html>
